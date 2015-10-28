@@ -29,7 +29,7 @@ gem 'tilt', '1.4.1'
 # Use ActiveAdmin
 gem 'activeadmin', github: 'activeadmin'
 # rich text editor
-gem 'ckeditor'
+# gem 'ckeditor'
 
 # Use Devise for authentication
 gem 'devise'
@@ -77,6 +77,15 @@ group :development, :test do
   gem 'json_spec'
   gem 'simplecov', :require => false
   gem 'byebug'
+
+  # Deploy features
+  gem 'capistrano'
+  gem "capistrano-db-tasks", require: false
+  gem 'capistrano-nginx-unicorn'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rvm'
+  gem 'sshkit-sudo'
 end
 
 # Use unicorn as the app server
@@ -87,5 +96,4 @@ end
 
 group :development do
   gem 'web-console', '~> 2.0'
-  gem 'capistrano-rails', '~> 1.1.1'
 end
