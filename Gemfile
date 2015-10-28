@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -23,25 +23,69 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'sprockets', '2.12.3'
+gem 'tilt', '1.4.1'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
+# Use ActiveAdmin
+gem 'activeadmin', github: 'activeadmin'
+# rich text editor
+gem 'ckeditor'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# Use Devise for authentication
+gem 'devise'
+
+# Authorization abilities
+gem 'cancancan', '~> 1.10'
+
+# Search Engine Optimization plugin
+gem 'meta-tags'
+
+# Decorator
+gem 'draper'
+
+gem 'hstore_accessor'
+gem 'haml'
+
+# Normalize AR attributes
+gem 'attribute_normalizer'
+gem 'attr_extras', '>= 3.2.0'
+
+# Bootstrap framework
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
+gem 'bootstrap-typeahead-rails'
+gem 'autoprefixer-rails'
+
+# Angular js
+gem 'angularjs-rails'
+gem 'angular-rails-templates'
+gem 'listen', '~> 2.7'
+gem 'angular-ui-bootstrap-rails'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-end
-
-group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'letter_opener'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Rspec
+  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-given'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  gem 'json_spec'
+  gem 'simplecov', :require => false
+  gem 'byebug'
 end
 
+# Use unicorn as the app server
+group :production do
+  gem 'unicorn'
+  gem 'unicorn-worker-killer'
+end
+
+group :development do
+  gem 'web-console', '~> 2.0'
+  gem 'capistrano-rails', '~> 1.1.1'
+end
