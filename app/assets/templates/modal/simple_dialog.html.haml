@@ -1,0 +1,8 @@
+.modal-header{class: "dialog-header{{dialogService.headerClass}}"}
+  %h4.modal-title
+    %span.glyphicon.glyphicon-star
+    {{dialogService.header}}
+.modal-body
+  {{dialogService.message}}
+.modal-footer
+  %button.btn.btn-primary{'ng-click' => 'close()', :type => "button"} Ok
