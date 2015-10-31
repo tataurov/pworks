@@ -1,5 +1,5 @@
 USER = 'zeal'
-SERVER = '192.168.0.105'
+SERVER = 'vasiliy-tataurov.ru'
 APP_NAME = 'pworks'
 APP_SRV = "#{USER}@#{SERVER}"
 

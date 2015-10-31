@@ -30,7 +30,7 @@ gem 'tilt', '1.4.1'
 gem 'activeadmin', github: 'activeadmin'
 # rich text editor
 # gem 'ckeditor'
-
+gem 'paperclip', '~> 4.3'
 # Use Devise for authentication
 gem 'devise'
 
@@ -80,7 +80,7 @@ group :development, :test do
 
   # Deploy features
   gem 'capistrano'
-  gem "capistrano-db-tasks", require: false
+  gem 'capistrano-db-tasks', require: false
   gem 'capistrano-nginx-unicorn'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
