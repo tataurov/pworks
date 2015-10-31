@@ -11,5 +11,8 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.digest = false
 
+Rails.application.config.assets.compress = true
+Rails.application.config.assets.js_compressor = NoCompression.new
+
 Rails.application.config.assets.paths << Rails.root.join("lib","assets","bower_components","bootstrap-sass-official", "assets", "stylesheets")
 Rails.application.config.assets.paths << Rails.root.join("lib","assets","bower_components","bootstrap-sass-official", "assets", "fonts")
