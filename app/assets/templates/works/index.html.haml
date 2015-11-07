@@ -2,3 +2,12 @@
   .row
     .col-md-3
       %h1 Works page
+    .col-md-12
+      %ul{'ng-repeat' => 'item in works'}
+        %li
+          .work-title {{item.title}}
+          .work-image
+            %img{src: '{{item.big_image_url}}'}
+          .work-description {{item.description}}
+          .work-category {{item.category.title}}
+          .work-material {{item.material.title}}

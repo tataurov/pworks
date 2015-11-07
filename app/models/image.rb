@@ -8,6 +8,8 @@ class Image < ActiveRecord::Base
   validates_attachment :image, :presence => true,
                        :content_type => { :content_type => IMAGE_CONTENT_TYPES }
 
+  alias_method :url, :image
+
   def image_params
     {
       main_image: '600x600#'
@@ -17,6 +19,4 @@ class Image < ActiveRecord::Base
   def download_from_url(url)
     self.image = URI.parse(url)
   end
-
-  alias_method :url, :image
 end

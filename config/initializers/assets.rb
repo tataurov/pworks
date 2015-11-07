@@ -3,12 +3,14 @@
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
 
-# Add additional assets to the asset load path
-# Rails.application.config.assets.paths << Emoji.images_path
+folders = %w( package/ rails_admin/ active_admin.css ckeditor/* )
 
-# Precompile additional assets.
-# application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-# Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile << Proc.new do |path|
+  folders.any? do |path_part|
+    path.start_with?(path_part)
+  end
+end
+
 Rails.application.config.assets.digest = false
 
 Rails.application.config.assets.compress = true

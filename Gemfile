@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 
@@ -16,6 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -27,12 +27,15 @@ gem 'sprockets', '2.12.3'
 gem 'tilt', '1.4.1'
 
 # Use ActiveAdmin
-gem 'activeadmin', github: 'activeadmin'
+gem 'rails_admin', '0.6.8'
+gem 'paperclip', '~> 4.3'
+gem 'rails_admin_jcrop'
 # rich text editor
 # gem 'ckeditor'
-gem 'paperclip', '~> 4.3'
+
 # Use Devise for authentication
 gem 'devise'
+gem 'devise-bootstrap-views'
 
 # Authorization abilities
 gem 'cancancan', '~> 1.10'
