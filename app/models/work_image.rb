@@ -1,5 +1,4 @@
 class WorkImage < Image
-
   def image_params
     {
       small: '200x200>',

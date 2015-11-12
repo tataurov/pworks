@@ -13,6 +13,13 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Bootstrap framework
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
+gem 'bootstrap-typeahead-rails'
+gem 'autoprefixer-rails'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
@@ -27,9 +34,10 @@ gem 'sprockets', '2.12.3'
 gem 'tilt', '1.4.1'
 
 # Use ActiveAdmin
-gem 'rails_admin', '0.6.8'
-gem 'paperclip', '~> 4.3'
-gem 'rails_admin_jcrop'
+gem 'rails_admin'
+gem 'paperclip'
+gem 'ack_rails_admin_jcrop'
+
 # rich text editor
 # gem 'ckeditor'
 
@@ -47,18 +55,12 @@ gem 'meta-tags'
 gem 'draper'
 
 gem 'hstore_accessor'
+gem 'slim-rails'
 gem 'haml'
 
 # Normalize AR attributes
 gem 'attribute_normalizer'
 gem 'attr_extras', '>= 3.2.0'
-
-# Bootstrap framework
-gem 'bootstrap-sass', '~> 3.2.0'
-gem 'momentjs-rails', '>= 2.9.0'
-gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
-gem 'bootstrap-typeahead-rails'
-gem 'autoprefixer-rails'
 
 # Angular js
 gem 'angularjs-rails'

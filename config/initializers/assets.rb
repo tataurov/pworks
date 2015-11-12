@@ -3,7 +3,7 @@
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
 
-folders = %w( package/ rails_admin/ active_admin.css ckeditor/* )
+folders = %w( package/ active_admin.css ckeditor/* )
 
 Rails.application.config.assets.precompile << Proc.new do |path|
   folders.any? do |path_part|
