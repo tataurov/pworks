@@ -1,7 +1,7 @@
 class Image < ActiveRecord::Base
   IMAGE_CONTENT_TYPES = %w(image/jpeg image/jpg image/png).freeze
 
-  belongs_to :imageable, :polymorphic => true, :touch => true
+  belongs_to :imageable, :polymorphic => true
 
   has_attached_file :image, styles: lambda { |a| a.instance.image_params }
 

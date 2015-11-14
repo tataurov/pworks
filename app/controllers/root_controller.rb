@@ -1,15 +1,5 @@
 class RootController < ApplicationController
-  def angular
-    render layout: layout_name
-  end
+  def index
 
-  private
-
-  def layout_name
-    if params[:layout] == 0
-      false
-    else
-      'application'
-    end
   end
 end

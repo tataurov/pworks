@@ -1,13 +1,16 @@
 !!!
-%html{'ng-app' => 'App'}
+%html
   %head
     %base{href: '/'}
     %title Портфолио
-    = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
+    = stylesheet_link_tag    'package/application', media: 'all'
+    = javascript_include_tag 'package/application'
     = csrf_meta_tags
   %body
-    #main-container
-      = yield
+    .page-body
+      .page
+        = render 'partials/header'
+        = yield
+        = render 'partials/footer'
 
 

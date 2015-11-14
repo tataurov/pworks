@@ -1,0 +1,7 @@
+%ul.works-list
+  - works.each do |work|
+    %li.work-item
+      .work-item-top
+        %img{src: work.work_image.url(:small)}
+      .work-image-bottom
+        = work.title

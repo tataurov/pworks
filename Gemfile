@@ -16,8 +16,6 @@ gem 'coffee-rails', '~> 4.1.0'
 # Bootstrap framework
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'momentjs-rails', '>= 2.9.0'
-gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
-gem 'bootstrap-typeahead-rails'
 gem 'autoprefixer-rails'
 
 # Use jquery as the JavaScript library
@@ -30,8 +28,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'sprockets', '2.12.3'
-gem 'tilt', '1.4.1'
+gem 'sprockets'
 
 # Use ActiveAdmin
 gem 'rails_admin'
@@ -61,12 +58,6 @@ gem 'haml'
 # Normalize AR attributes
 gem 'attribute_normalizer'
 gem 'attr_extras', '>= 3.2.0'
-
-# Angular js
-gem 'angularjs-rails'
-gem 'angular-rails-templates'
-gem 'listen', '~> 2.7'
-gem 'angular-ui-bootstrap-rails'
 
 group :development, :test do
   gem 'letter_opener'
