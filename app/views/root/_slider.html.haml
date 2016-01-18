@@ -1,0 +1,14 @@
+- slides = ['DSC01377.JPG', 'S4022144.JPG', 'DSC01358.JPG']
+.slider-frame
+  .slider-wrapper
+    .js-root-slide.iosslider
+      .slider
+        - slides.each do |slide|
+          .slide
+            .slide-bg
+              %img{src: asset_path(slide)}
+      .navigation
+        - slides.each do |slide|
+          .item
+      #js-slider-right.slider-arrow.right-
+      #js-slider-left.slider-arrow.left-

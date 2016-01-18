@@ -1,4 +1,5 @@
 //= require plugins/jquery-18.js
+//= require plugins/slides.js
 //= require jquery_ujs
 //= require global
 
@@ -7,3 +8,4 @@
 
 /* helpers */
 //= require helpers/jquery_helpers
+//= require init
