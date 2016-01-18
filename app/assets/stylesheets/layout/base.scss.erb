@@ -7,19 +7,28 @@ textarea {
 }
 
 body {
-  background-image: url(<%= asset_path 'mb_bgr_main.jpg'%>);
+  background-image: url(<%= asset_path 'bg_site.jpg'%>);
   background-position: 0 50%;
   font-size: 14px;
   line-height: 1.2;
   color: #fff;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.page-body {
+  background-image: url(<%= asset_path 'bg_center.jpg'%>); min-height: 890px;
+  background-position: 50% 0; background-repeat: no-repeat;
 }
 
 .page-content {
-  padding-top: 20px; padding-bottom: 20px; min-height: 600px;
-  background-image: url(<%= asset_path 'mb_bgr_wrap.png'%>);
+  padding-top: 20px; padding-bottom: 20px; min-height: 650px; position: relative;
+  &:after {
+    content: ''; position: absolute; bottom: 0; left: 0; height: 48px; background-image: url(<%= asset_path 'border.png'%>);
+    background-repeat: repeat-x; background-position: 0 0; width: 100%;
+  }
 }
 
-
+.fs-nice { font-family: 'Marck Script', cursive; }
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate.

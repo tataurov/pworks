@@ -1,5 +1,23 @@
 .header-wrapper
   .base-width.header
+    .container.clearfix.header-top
+      .grid-6
+        %a.logo{href: root_url}
+          %span.title-
+            Резьба
+            %span по
+            Дереву
+          %span.description- портфолио Татаурова Василия
+      .grid-6
+        %a.sand-mail{href: 'mailto:zaealnm@mail.ru'} Написать мне
     .container.clearfix
-      .grid-6 Logo
-      .grid-6 Navigation
+      %nav.navigation
+        %ul.nav-list.clearfix
+          %li.nav-list-item
+            %a{href: root_url} Главная
+          %li.nav-list-item
+            %a{href: works_path} Работы
+          %li.nav-list-item
+            %a{href: '#'} Обо мне
+          %li.nav-list-item
+            %a{href: '#'} Контакты

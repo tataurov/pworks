@@ -1,3 +1,26 @@
 .header-wrapper {
-  padding: 30px 0; margin-bottom: 20px;
+  padding: 15px 0; margin-bottom: 20px; box-sizing: border-box;
+  .header-top {
+    box-sizing: border-box; height: 93px;
+  }
+  .logo {
+    font-family: 'Marck Script', cursive; font-size: 58px; text-decoration: none; position: relative;
+    width: 236px; line-height: .7; display: block; letter-spacing: -1px;
+    .title- {
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, .78);
+      span { font-size: 35px; position: relative; bottom: -11px; left: -5px; }
+    }
+    .description- {
+      font-size: 20px; position: absolute; left: 100%; white-space: nowrap; top: -9px; margin-left: -98px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, .78);
+    }
+  }
+  .sand-mail {
+    background-image: url(<%= asset_path 'mail.png' %>); width: 68px; height: 0px; float: right; margin: 12px 82px 0 0;
+    padding-top: 35px; text-align: center; color: #fff; font-size: 11px; display: block; text-decoration: none;
+    transition: all .1s linear; background-repeat: no-repeat; background-position: 50% 0;
+    &:hover {
+      background-position: 50% -2px;
+    }
+  }
 }

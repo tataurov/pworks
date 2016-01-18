@@ -4,13 +4,19 @@
     %base{href: '/'}
     %title Портфолио
     = stylesheet_link_tag    'package/application', media: 'all'
-    = javascript_include_tag 'package/application'
+    %link{:href => "https://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic", :rel => "stylesheet", :type => "text/css"}/
+    :javascript
+      var app = app || {config: {}, modules: {coreApplicationBase: {}, application: {}}};
+
     = csrf_meta_tags
   %body
     .page-body
       .page
         = render 'partials/header'
-        = yield
+        .content-wrapper
+          .base-width.page-content
+            = yield
         = render 'partials/footer'
 
-
+    = javascript_include_tag 'package/application'
