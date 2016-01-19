@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   root 'root#index'
 
   resources :works, only: [:index]
+
+  get '*unmatched_route', to: 'application#not_found'
 end
