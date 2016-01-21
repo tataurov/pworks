@@ -6,7 +6,7 @@
           - @slides.each do |slide|
             .slide
               .slide-bg
-                %img{src: asset_path(slide.slide_image.url)}
+                %img{src: asset_path(slide.slide_image.url(:main_image))}
         .navigation
           - @slides.count.times do |i|
             .item{class: i == 0 && :selected}
