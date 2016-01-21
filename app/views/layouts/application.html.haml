@@ -1,9 +1,8 @@
 !!!
 %html
   %head
+    = display_meta_tags(page_meta_tags)
     %meta{:content => 'width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no', :name => 'viewport'}
-    %base{href: '/'}
-    %title Портфолио
     = stylesheet_link_tag    'package/application', media: 'all'
     %link{:href => "https://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "https://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic", :rel => "stylesheet", :type => "text/css"}/
@@ -19,5 +18,6 @@
           .base-width.page-content
             = yield
         = render 'partials/footer'
+    = render 'partials/seo/yandex_counter'
 
     = javascript_include_tag 'package/application'
