@@ -47,6 +47,7 @@ gem 'cancancan', '~> 1.10'
 
 # Search Engine Optimization plugin
 gem 'meta-tags'
+gem 'sitemap_generator'
 
 # Decorator
 gem 'draper'

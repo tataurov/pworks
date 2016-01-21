@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   root 'root#index'
+  get '/robots.txt' => 'root#robots'
 
   resources :works, only: [:index]
 
