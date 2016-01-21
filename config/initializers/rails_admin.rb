@@ -46,4 +46,15 @@ RailsAdmin.config do |config|
       end
     end
   end
+
+  config.model SlideImage do
+    configure :image, :jcrop
+
+    # Below is optional
+    edit do
+      field :image do
+        jcrop_options aspectRatio: 540.0/300.0
+      end
+    end
+  end
 end
