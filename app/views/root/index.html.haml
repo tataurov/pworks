@@ -1,3 +1,9 @@
 .container.root-page-content
-  .grid-7= render 'slider'
-  .grid-5
+  .root-page-top.clearfix
+    .grid-7= render 'slider'
+    .grid-5
+      .snippet
+        %h1.title-= page_settings.header
+        .content-= page_settings.snippet
+  .page-content-block.clearfix
+    .grid-12= page_settings.static_content.html_safe

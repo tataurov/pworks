@@ -2,6 +2,7 @@ class WorkImage < Image
   def image_params
     {
       small: '200x200>',
+      thumb: '350x350>',
       big: '1500x1500>',
       main_image: '1000x1000>'
     }

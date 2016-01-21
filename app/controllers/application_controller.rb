@@ -32,6 +32,7 @@ class ApplicationController < ActionController::Base
 
     @page_settings = page_settings.present? ? page_settings : PageSettings.default_settings
     @page_settings.try(:header=, TextKeysReplacement.replace(@page_settings.try(:header), @seo_context))
+    @page_settings.try(:static_content=, TextKeysReplacement.replace(@page_settings.try(:static_content), @seo_context))
     @page_settings
   end
   helper_method :page_settings

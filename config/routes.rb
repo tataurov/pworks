@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/robots.txt' => 'root#robots'
 
   resources :works, only: [:index]
+  resource :about, only: [:show]
+  resource :contacts, only: [:show]
 
   get '*unmatched_route', to: 'application#not_found'
 end

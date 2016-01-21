@@ -1,11 +1,13 @@
 %ul.works-list
   - works.each do |work|
-    %li.work-item.grid-4
+    %li.works-list-item
       .work-item-top
         .work-img-wrapper
           .work-img-cell
-            %img{src: work.work_image.url(:small)}
+            %img{src: work.work_image.url(:thumb)}
       .work-item-bottom
         .work-title= work.title
-        .work-category= work.category.try(:title)
-        .work-material= work.material.try(:title)
+        .work-details
+          = "#{work.category.try(:title)} - #{work.material.try(:title)}"
+  - 4.times do |dummy|
+    %li.wl-dummy

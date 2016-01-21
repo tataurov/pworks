@@ -7,4 +7,6 @@ SitemapGenerator::Sitemap.include_root = false
 SitemapGenerator::Sitemap.create do
   add root_path, priority: 1.0, :changefreq => 'daily'
   add works_path, priority: 0.9, :changefreq => 'monthly'
+  add about_path, priority: 0.9, :changefreq => 'monthly'
+  add contacts_path, priority: 0.9, :changefreq => 'monthly'
 end

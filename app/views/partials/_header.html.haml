@@ -13,11 +13,11 @@
     .container.clearfix
       %nav.navigation
         %ul.nav-list.clearfix
-          %li.nav-list-item
+          %li.nav-list-item{class: current_page?(root_url) && :active}
             %a{href: root_url} Главная
-          %li.nav-list-item
+          %li.nav-list-item{class: current_page?(works_path) && :active}
             %a{href: works_path} Работы
-          %li.nav-list-item
-            %a{href: '#'} Обо мне
-          %li.nav-list-item
-            %a{href: '#'} Контакты
+          %li.nav-list-item{class: current_page?(about_path) && :active}
+            %a{href: about_url} Обо мне
+          %li.nav-list-item{class: current_page?(contacts_path) && :active}
+            %a{href: contacts_path} Контакты
