@@ -9,4 +9,7 @@ SitemapGenerator::Sitemap.create do
   add works_path, priority: 0.9, :changefreq => 'monthly'
   add about_path, priority: 0.9, :changefreq => 'monthly'
   add contacts_path, priority: 0.9, :changefreq => 'monthly'
+  Work.all.each do |work|
+    add work_path(id: work.id_with_slug), priority: 0.9, :changefreq => 'monthly'
+  end
 end

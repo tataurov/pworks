@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root 'root#index'
   get '/robots.txt' => 'root#robots'
 
-  resources :works, only: [:index]
+  resources :works, only: [:index, :show]
   resource :about, only: [:show]
   resource :contacts, only: [:show]
 

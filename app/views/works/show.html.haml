@@ -1,0 +1,14 @@
+.container.clearfix
+  .work-card-wrapper
+    %h1.tac= @work.title
+    .work-card.clearfix
+      .grid-4.alpha
+        .work-details
+          = "#{@work.category.title} - #{@work.title} из #{@work.material.name_genitive}."
+        .work-description= @work.description
+      .grid-8.omega
+        .work-image-wrapper
+          .work-image-block
+            .work-image-frame
+            .work-image-cell
+              %img{src: @work.work_image.url(:big)}
