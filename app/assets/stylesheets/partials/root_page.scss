@@ -3,6 +3,12 @@
 }
 .snippet {
   padding-left: 20px;
-  .title- { margin: -15px 0 10px 0; line-height: 1;  }
+  .title- { margin: -15px 0 10px 0; line-height: 0.6;  }
   .content- { font-size: 16px; line-height: 1.55; }
+}
+
+@media only screen and (max-width: 479px) {
+  .snippet {
+    padding-left: 0;
+  }
 }

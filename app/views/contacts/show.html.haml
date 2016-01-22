@@ -1,3 +1,5 @@
 .container
-  %h1= page_settings.header
-  = page_settings.static_content.html_safe
+  .grid-12
+    %h1= page_settings.header
+    .content
+      = page_settings.static_content.html_safe

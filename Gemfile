@@ -36,7 +36,7 @@ gem 'paperclip'
 gem 'ack_rails_admin_jcrop'
 
 # rich text editor
-# gem 'ckeditor'
+gem 'ckeditor'
 
 # Use Devise for authentication
 gem 'devise'

@@ -239,7 +239,7 @@ Licensed under GPL and MIT
 	body{min-width:0;}
 	
 	/* Container */
-	.container { margin:0 auto; width:456px; overflow:hidden; }
+	.container { margin:0 auto; width:456px; }
 	
 	/* Global */
 	.container .grid-1,
@@ -311,7 +311,7 @@ Licensed under GPL and MIT
 	
 	/* Container */
 	
-	.container { width:300px;}
+	.container { width:350px;}
 	
 	/* Global */
 	
@@ -327,6 +327,6 @@ Licensed under GPL and MIT
 	.container .grid-10,
 	.container .grid-11,
 	.container .grid-12	{
-		width:260px;
+		width:300px;
 	}
 }

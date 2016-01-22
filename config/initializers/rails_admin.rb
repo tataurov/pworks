@@ -57,4 +57,17 @@ RailsAdmin.config do |config|
       end
     end
   end
+
+  config.model PageSettings do
+    edit do
+      field :controller
+      field :action
+      field :title
+      field :description
+      field :keywords
+      field :header
+      field :snippet
+      field :static_content, :ck_editor
+    end
+  end
 end

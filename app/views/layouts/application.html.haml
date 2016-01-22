@@ -18,6 +18,6 @@
           .base-width.page-content.clearfix
             = yield
         = render 'partials/footer'
-    = render 'partials/seo/yandex_counter'
+    = render 'partials/seo/yandex_counter' if Rails.env.production?
 
     = javascript_include_tag 'package/application'
