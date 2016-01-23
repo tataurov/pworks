@@ -56,8 +56,8 @@ namespace :sitemap do
 end
 
 namespace :deploy do
-  before :compile_assets, 'cache:clear'
   after :compile_assets, 'assets:no_digest'
+  after :compile_assets, 'cache:clear'
   after :compile_assets, 'sitemap:refresh'
 end
 
