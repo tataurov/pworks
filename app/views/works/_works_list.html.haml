@@ -1,14 +1,16 @@
 %ul.works-list
   - works.each do |work|
-    %li.works-list-item
-      %a.work-link{href: work_url(id: work.id_with_slug)}
-        .work-item-top
-          .work-img-wrapper
-            .work-img-cell
-              %img{src: work.work_image.url(:thumb)}
-        .work-item-bottom
-          .work-title= work.title
-          .work-details
-            = "#{work.category.try(:title)} - #{work.material.try(:title)}"
+    %li.works-list-item{itemscope: true, itemtype: 'http://schema.org/ImageGallery' }
+      %figure{itemprop: 'associatedMedia', itemscope: true, itemtype: 'http://schema.org/ImageObject'}
+        %a.work-link{href: work_url(id: work.id_with_slug)}
+          - seo_title = "#{work.title}, #{work.category.try(:title)} - #{work.material.try(:title)}"
+          .work-item-top
+            .work-img-wrapper
+              .work-img-cell
+                %img{src: work.work_image.url(:thumb), alt: seo_title, title: seo_title}
+          .work-item-bottom
+            %figcaption.work-title{itemprop: 'caption description'}= work.title
+            .work-details
+              = "#{work.category.try(:title)} - #{work.material.try(:title)}"
   - 4.times do |dummy|
     %li.wl-dummy

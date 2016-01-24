@@ -1,15 +1,17 @@
+- seo_title = "#{@work.title}, #{@work.category.try(:title)} - #{@work.material.try(:title)}"
 .container.clearfix
-  .work-card-wrapper
-    .grid-12
-      %h1.tac= @work.title
-    .work-card.clearfix
-      .grid-4.alpha
-        .work-details
-          = "#{@work.category.title} - #{@work.title} из #{@work.material.name_genitive}."
-        .work-description= @work.description
-      .grid-8.omega
-        .work-image-wrapper
-          .work-image-block
-            .work-image-frame
-            .work-image-cell
-              %img{src: @work.work_image.url(:big)}
+  .work-card-wrapper{itemscope: true, itemtype: 'http://schema.org/ImageGallery' }
+    %figure{itemprop: 'associatedMedia', itemscope: true, itemtype: 'http://schema.org/ImageObject'}
+      .grid-12
+        %h1.tac= @work.title
+      .work-card.clearfix
+        .grid-4.alpha
+          %figcaption.work-details{itemprop: 'caption description'}
+            = "#{@work.category.title} - #{@work.title} из #{@work.material.name_genitive}."
+          .work-description= @work.description
+        .grid-8.omega
+          .work-image-wrapper
+            %a.work-image-block{href: @work.work_image.url, itemprop: 'contentUrl', target: '_blank'}
+              .work-image-frame
+              .work-image-cell
+                %img{src: @work.work_image.url(:big), alt: seo_title, title: seo_title}
