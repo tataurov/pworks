@@ -1,0 +1,7 @@
+.lat-works
+  .header.clearfix
+    %h2.fl
+      Последние работы
+    %a.fr{href: works_url} Смотреть все работы
+  = render 'works/works_list', works: @last_works
+

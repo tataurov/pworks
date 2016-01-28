@@ -5,5 +5,9 @@
       .snippet
         %h1.title-= page_settings.header
         .content-= page_settings.snippet
+
+  .last-works-wrapper.clearfix
+    .grid-12= render 'last_works'
+
   .page-content-block.clearfix
     .grid-12= page_settings.static_content.html_safe
